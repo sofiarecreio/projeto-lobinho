@@ -4,58 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../header_footer.css">
+    <link rel="stylesheet" href="adotar.css">
 </head>
 <body>
     <header>
         <div class="nossos_lobinhos">
-            <a href="">Nossos Lobinhos</a>
+            <a href="../PáginaListadeLobinhos/lista.html">Nossos Lobinhos</a>
         </div>
         <div class="lobinho">
-            <img src="imagens/Lobinho.png" alt="Lobinho">
+            <img src="../IMG/Lobinho.png" alt="Lobinho">
         </div>
         <div class="quem_somos_link">
-            <a href="">Quem Somos</a>
+            <a href="../PáginaQuemSomos/quem_somos.html">Quem Somos</a>
         </div>
     </header>
 
     <div class="secao">
-        
-            <div class="formulario">
-                <div class="titulo">
-                    <h2>Coloque um Lobinho para Adoção</h2>
+        <div class="secao_adocao">
+            <div class="info_lobo">
+                <div class="img">
+                    <img src="" alt="Lobo">
                 </div>
-
+                <div class="texto">
+                    <div class="titulo">
+                        <p>Adote o(a) </p>
+                    </div>
+                    <div class="subtitulo">
+                        <p>ID:</p>
+                    </div>   
+                </div>              
+            </div>
+    
+            <div class="formulario">
                 <form  class="card" for="">
-                    <div class="class_nome_idade">
+                    <div class="nome_idade">
                         <div class="input_box" id="id_nome">
                             <label for="nome">Nome:</label>
-                            <input type="text" name="nome" required>
+                            <input type="text" id="nome" required>
                         </div>
                         <div class="input_box" id="id_idade">
-                            <label for="idade">Anos:</label>
-                            <input type="text" name="idade" required>
+                            <label for="idade">Idade:</label>
+                            <input type="text" id="idade" required>
                         </div>
                     </div>
-                    <div class="class_link">
+                    <div class="class_email">
                         <div class="input_box">
-                            <label for="link">Link da Foto:</label>
-                            <input type="text" name="link" required>
-                        </div>
-                    </div>
-                    <div class="class_descricao">
-                        <div class="input_box">
-                            <label for="descricao">Descrição:</label>
-                            <input type="text" name="descricao" class="descricao" required>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" required>
                         </div>
                     </div>
                 </form>
-
-                <div class="btn_salvar_div">
-                    <input type="submit" class= "btn_salvar" value="Salvar">
-                </div>
             </div>
+        </div>
+       
+            </form>
 
+        <div class="btn_adotar_div">
+            <input type="submit" class= "btn_adotar" value="Adotar">
+        </div>
     </div>
 
     <footer>
@@ -70,19 +77,19 @@
                 </div>
                 <div class="contato">
                     <div class="local">
-                        <img src="imagens/placeholder-for-map.png">
+                        <img src="../IMG/placeholder-for-map.png">
                         <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ, 24210-315</p>
                     </div>
                     <div class="tel">
-                        <img src="imagens/call-answer.png">
+                        <img src="../IMG/call-answer.png">
                         <p>(99) 99999-9999</p>
                     </div>
                     <div class="email">
-                        <img src="imagens/envelope.png">
+                        <img src="../IMG/envelope.png">
                         <p>salve-lobos@lobINhos.com</p>
                      </div>
                     <div class="btn_quem_somos_div">
-                        <a href=""><button type="button" class= "btn_quem_somos">Quem Somos</button></a>
+                        <a href="../PáginaQuemSomos/quem_somos.html"><button type="button" class= "btn_quem_somos">Quem Somos</button></a>
                     </div>
                 </div>
             </div>
@@ -92,13 +99,13 @@
                     <p>Desenvolvido com</p>
                 </div>
                 <div class="img_pata">
-                    <img src="imagens/paws.png">
+                    <img src="../IMG/paws.png">
                 </div>
             </div>
         </div>
 
     </footer>
 
-    <script src="script3.js"></script>
+    <script src="adotar.js"></script>
 </body>
 </html>
