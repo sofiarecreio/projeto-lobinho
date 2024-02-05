@@ -31,45 +31,6 @@ header {
     flex-basis: auto;
 }
 
-.secao_adocao {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-grow: 1;
-    flex-basis: auto;
-}
-
-.info_lobo {
-    display: flex;
-    margin-top: 40px; 
-}
-
-.img {
-    width: 200px;
-    height: 200px;
-    border-radius: 247px;
-}
-
-.texto {
-    padding-left: 40px;
-}
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 800;
-    font-family: Arial;
-}
-
-.subtitulo {
-    display: flex;
-    font-size: 12px;   
-    font-family: Arial; 
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -210,11 +171,5 @@ header {
         flex-direction: column;
     }
 
-    #id_nome {
-        width: 70vw;
-    }
-    
-    #id_idade {
-        width: 10vw;
-    }
+
 }   
