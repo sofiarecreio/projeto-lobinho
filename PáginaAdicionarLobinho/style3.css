@@ -31,32 +31,50 @@ header {
     flex-basis: auto;
 }
 
+.titulo {
+    font-size: 30px;
+    font-family: arial;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
     padding:0 5px;
-    width: 80vw;
+    width: 60vw;
 }
 
-.nome_idade {
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    margin: 80px;
+    padding: 15px;
+}
+
+.class_nome_idade {
     display: flex;
 }
 
 #id_nome {
-    width: 75vw;
+    width: 60vw;
 }
 
 #id_idade {
-    width: 5vw;
+    width: 20vw;
+}
+
+#id_descricao {
+    min-height: 80vh;
 }
 
 .input_box{
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-top: 40px;
     margin-right: 50px;
 }
 
@@ -65,9 +83,7 @@ header {
     padding:5px ;
     font-size: 1.0em;
     margin-top: 40px;
-    background: transparent;
-    border:none;
-    border-bottom: 1px solid #000000;
+    background-color: #E6E6E6;
     outline: none;
 }
 
@@ -77,10 +93,11 @@ header {
     left: 0;
     padding: 10px 0;
     font-size: 1.1em;
+    font-weight: 550;
     font-family: arial;
 }
 
-.btn_adotar {
+.btn_salvar {
     display: flex;
     justify-content: center;
     margin: 50px;
@@ -143,7 +160,7 @@ header {
     font-size: 20px;
 }
 
-.patas {
+.pata {
     display: flex;
     flex-direction: column;
     justify-content: center;

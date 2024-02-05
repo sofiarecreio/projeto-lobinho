@@ -20,37 +20,42 @@
     </header>
 
     <div class="secao">
+        
             <div class="formulario">
-                
+                <div class="titulo">
+                    <h2>Coloque um Lobinho para Adoção</h2>
+                </div>
+
                 <form  class="card" for="">
                     <div class="class_nome_idade">
                         <div class="input_box" id="id_nome">
                             <label for="nome">Nome:</label>
-                            <input type="text" name="nome">
+                            <input type="text" name="nome" required>
                         </div>
                         <div class="input_box" id="id_idade">
-                            <label for="idade">Idade:</label>
-                            <input type="text" name="idade">
+                            <label for="idade">Anos:</label>
+                            <input type="text" name="idade" required>
                         </div>
                     </div>
-                    <div class="class_email">
+                    <div class="class_link">
                         <div class="input_box">
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email">
+                            <label for="link">Link da Foto:</label>
+                            <input type="text" name="link" required>
                         </div>
                     </div>
                     <div class="class_descricao">
-                        <label for="descricao">Descrição:</label>
-                        <textarea name="descricao" id="textarea" cols="30" rows="10"></textarea>
+                        <div class="input_box">
+                            <label for="descricao">Descrição:</label>
+                            <input type="text" name="descricao" id="descricao" required>
+                        </div>
                     </div>
                 </form>
-            </div>
-     
-            </form>
 
-        <div class="btn_salvar_div">
-            <button type="submit" class= "btn_salvar">Salvar</button>
-        </div>
+                <div class="btn_salvar_div">
+                    <input type="submit" class= "btn_salvar" value="Salvar">
+                </div>
+            </div>
+
     </div>
 
     <footer>
