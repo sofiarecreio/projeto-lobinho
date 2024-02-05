@@ -2,7 +2,7 @@
 
 
 /* Begin standart Style */
-* {
+html,body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -20,7 +20,15 @@ header {
 }
 
 .nossos_lobinhos, .quem_somos_link {
-    a::before {
+    a {
+        position: relative;
+        color: #000;
+        text-decoration: none;
+      }   
+      a:hover {
+        color: #000;
+      }     
+      a::before {
         content: "";
         position: absolute;
         display: block;
@@ -31,7 +39,10 @@ header {
         background-color: #000;
         transform: scaleX(0);
         transition: transform 0.3s ease;
-    }
+      }   
+      a:hover::before {
+        transform: scaleX(1);
+      }
     font-size: 20px;
     font-weight: 550;
     font-family: Arial;
