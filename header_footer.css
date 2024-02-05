@@ -133,6 +133,10 @@ header {
     .rodape {
         flex-direction: column;
     }
+
+    .infos {
+        flex-direction: column;
+    }
 }
 
 /* End Footer Style */
