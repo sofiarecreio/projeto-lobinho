@@ -1,10 +1,17 @@
+@font-face {
+    font-family: DarkGrotesque;
+    src: url(../fonts/DarkerGrotesque-VariableFont_wght.ttf);
+  }
 html, body{
     margin: 0;
     display: flex;
     flex-flow: column;
     height: 100vh;
+    
 }
-
+label, a, p{
+    font-family: DarkGrotesque;
+}
 header {
     display: flex;
     justify-content: space-around;
@@ -61,13 +68,11 @@ header {
     align-items: center;
     font-size: 30px;
     font-weight: 800;
-    font-family: Arial;
 }
 
 .subtitulo {
     display: flex;
     font-size: 12px;   
-    font-family: Arial; 
 }
 
 .card {
@@ -116,7 +121,6 @@ header {
     left: 0;
     padding: 10px 0;
     font-size: 1.1em;
-    font-family: arial;
 }
 
 .btn_adotar {
@@ -130,6 +134,7 @@ header {
     color: white;
     width: 150px;
     height: 35px;
+    font-family: DarkGrotesque;
 }
 
 .retangulo {
