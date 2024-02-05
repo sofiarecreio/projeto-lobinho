@@ -23,67 +23,7 @@
     margin-bottom: 50px;
 }
 
-.retangulo {
-    width: 100%;
-    height: 5px;
-    background: -webkit-gradient(linear, left top, right top, from(#DEB959), to(#2C5680)) no-repeat;
-}
 
-.rodape {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-grow: 0;
-    flex-basis: 100px;
-    font-weight: 400;
-    font-size: 18px;
-    font-family: arial;
-    background-color: #353535;
-}
-
-.infos {
-    display: flex;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.contato {
-    margin: 15px;
-    align-items: baseline;
-}
-
-.local, .tel, .email {
-    display: flex;
-    align-items: baseline;
-    margin: 5px;
-    padding: 15px;
-    color: white;
-}
-
-.btn_quem_somos_div {
-    margin-left: 22px;
-}
-
-.btn_quem_somos {
-    background-color: #DEB959;
-    margin-left: 22px;
-    padding: 5px;
-    border: 1px solid #DEB959;
-    font-size: 20px;
-}
-
-.patas {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.texto_rodape {
-    text-align: center;
-    color: white;
-}
 
 
 
