@@ -45,6 +45,12 @@ header {
     margin-top: 40px; 
 }
 
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 247px;
+}
+
 .texto {
     padding-left: 40px;
 }
@@ -177,6 +183,8 @@ header {
 }
 
 .patas {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -186,3 +194,21 @@ header {
     text-align: center;
     color: white;
 }
+
+.img_pata {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen  and (max-width: 830px) {
+    .rodape {
+        flex-direction: column;
+    }
+
+    .infos {
+        flex-direction: column;
+    }
+
+
+}   
