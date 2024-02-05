@@ -97,17 +97,20 @@ header {
     font-family: arial;
 }
 
+.descricao {
+    height: 200px;
+}
+
 .btn_salvar {
     display: flex;
     justify-content: center;
     margin: 50px;
     background-color: #2C5680;
     padding: 5px;
-    border: 1px solid #2C5680;
     font-size: 20px;
     color: white;
     width: 150px;
-    height: 35px;
+    height: 40px;
 }
 
 .retangulo {
