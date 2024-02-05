@@ -22,7 +22,7 @@ header {
     font-family: Arial;
 }
 
-.secao_adocao {
+.secao {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,10 +31,18 @@ header {
     flex-basis: auto;
 }
 
+.secao_adocao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
 .info_lobo {
     display: flex;
-    justify-content: flex-start;
-    margin: 40px; 
+    margin-top: 40px; 
 }
 
 .texto {
@@ -58,17 +66,31 @@ header {
 
 .card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: 10px;
     padding:0 5px;
+    width: 80vw;
+}
+
+.nome_idade {
+    display: flex;
+}
+
+#id_nome {
+    width: 75vw;
+}
+
+#id_idade {
+    width: 5vw;
 }
 
 .input_box{
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin: 40px;
+    margin-top: 40px;
+    margin-right: 50px;
 }
 
 .input_box input{
@@ -88,19 +110,20 @@ header {
     left: 0;
     padding: 10px 0;
     font-size: 1.1em;
-
+    font-family: arial;
 }
 
 .btn_adotar {
     display: flex;
-    margin-bottom: 50px;
+    justify-content: center;
+    margin: 50px;
     background-color: #2C5680;
     padding: 5px;
     border: 1px solid #2C5680;
     font-size: 20px;
     color: white;
-    text-decoration: none;
-
+    width: 150px;
+    height: 35px;
 }
 
 .retangulo {
