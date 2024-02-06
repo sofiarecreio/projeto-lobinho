@@ -152,3 +152,11 @@ for (let i = 0; i < 4; i++) {
 }
 // TODO: Adicionar forma de identificar a página atual
 // TODO: Mudar o conteúdo que a função puxará de acordo com a página atual
+
+filtro.addEventListener('change', (event) => {
+  if (event.currentTarget.checked) {
+    alert('checado');
+  } else {
+    alert('nao checado');
+  }
+})
