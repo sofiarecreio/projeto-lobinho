@@ -7,6 +7,7 @@ async function getData() {
     return data
 }
 
+getData()
 
 /*
 getData()
