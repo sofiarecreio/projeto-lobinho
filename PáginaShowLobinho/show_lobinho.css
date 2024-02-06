@@ -116,18 +116,44 @@
 /* Estilização da seção lobomain */
 .lobomain {
     padding: 30px;
+    /* border:1px solid grey; */
 }
 
 /* Estilização loboprincipal (Botões e imagem) */
 .loboprincipal {
     padding: 25px;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    /* border: 1px solid yellowgreen; */
+
 }
 
 /* Estilização do campo de botões */
 .buttons {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
+
+}
+
+#excluir,
+#adotar:hover {
+    cursor: pointer;
+}
+
+/* Estilização imagem lobo */
+.imglobo {
+    box-shadow: -20px -20px #2c5680;
+}
+
+/* Estilização da descrição do lobo */
+.desclobo {
+    /* border: 1px solid red; */
+    padding: 10px;
+
 }
 
 
