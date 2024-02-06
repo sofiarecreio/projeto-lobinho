@@ -6,7 +6,7 @@ async function getData(id) {
     let data = await fetchJSONData()
     return data[id]
 }
-
+let filtro = document.getElementById("adotados")
 /* Funcionalidade 1: Criar um card do lobo a partir do arquivo JSON*/
 function Card(id) {
     // Criar elementos
@@ -43,16 +43,21 @@ function Card(id) {
     // Pegar as informações e adicionar em um elemento
     // Nome
     getData(id).then((dados) => {
+        
         wolf_name.innerText = dados.nome
         wolf_age.innerText = `Idade: ${dados.idade} anos`
         description.innerText = dados.descricao
         img.setAttribute("src", dados.imagem)
 
         // TODO: Adicionar filtro para lobos adotados
+
         // Adotado?
         if (dados.adotado){
             adopt.innerText = "Adotado"
             adopt.style.backgroundColor = "#7AAC3A"
+            let dono = document.createElement("h2")
+            dono.innerText = `Adotado por ${dados.nomeDono}`
+            description.append(dono)
         }else{
             adopt.innerText = "Adotar"
         }
