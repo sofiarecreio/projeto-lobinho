@@ -70,45 +70,14 @@
     width: 5vw;
 }
 
-.input_box{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-top: 40px;
-    margin-right: 50px;
-}
-
-.input_box input{
-    width: 100%;
-    padding:5px ;
-    font-size: 1.0em;
-    margin-top: 40px;
-    background: transparent;
-    border:none;
-    border-bottom: 1px solid #000000;
-    outline: none;
-}
-
-.input_box label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 1.1em;
-}
-
-.btn_adotar {
+.textonome {
     display: flex;
     justify-content: center;
-    margin: 50px;
-    background-color: #2C5680;
-    padding: 5px;
-    border: 1px solid #2C5680;
-    font-size: 20px;
-    color: white;
-    width: 150px;
-    height: 35px;
-    font-family: DarkGrotesque;
+    margin: auto;
+}
+
+.nomelobo {
+    text-align: center;
 }
 
 @media screen  and (max-width: 830px) {
