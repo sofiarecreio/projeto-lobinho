@@ -24,7 +24,6 @@ function Card(id) {
     let wolf_name = document.createElement("h2")
     wolf_name.classList.add("wolf_name")
     let adopt = document.createElement("button")
-    adopt.innerText = "Adotar"
     adopt.classList.add("adopt")
     let wolf_age = document.createElement("p")
     wolf_age.classList.add("wolf_age")
@@ -48,6 +47,16 @@ function Card(id) {
         wolf_age.innerText = `Idade: ${dados.idade} anos`
         description.innerText = dados.descricao
         img.setAttribute("src", dados.imagem)
+
+        // TODO: Adicionar filtro para lobos adotados
+        // Adotado?
+        if (dados.adotado){
+            adopt.innerText = "Adotado"
+            adopt.style.backgroundColor = "#7AAC3A"
+        }else{
+            adopt.innerText = "Adotar"
+        }
+
 
         // Critério de alternância entre esquerda e direita
         if (dados.id % 2 == 1) {
@@ -80,4 +89,3 @@ for (let i = 0; i < 4; i++){
 
 // TODO: Adicionar forma de identificar a página atual
 // TODO: Mudar o conteúdo que a função puxará de acordo com a página atual
-// TODO: Adicionar filtro para lobos adotados
