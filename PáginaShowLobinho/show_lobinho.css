@@ -75,6 +75,17 @@
     justify-content: center;
     margin: auto;
 }
+.lobomain {
+    display: flex;
+}
+.imglobo {
+    display: flex;
+    border:0;
+}
+.desclobo {
+    display: flex;
+
+}
 
 .nomelobo {
     text-align: center;
