@@ -8,18 +8,18 @@ async function getData(id) {
 }
 
 /* Funcionalidade 1: Criar um card do lobo a partir do arquivo JSON*/
-function Card(){
+function Card(id) {
     // Criar elementos
-        //Container
+    //Container
     let container = document.createElement("div")
     container.classList.add("container")
-        //Wolf Image
+    //Wolf Image
     let wolf_img = document.createElement("div")
-    wolf_img.classList.add("wolf_img")
-        // Wolf Description
+
+    // Wolf Description
     let wolf_des = document.createElement("div")
     wolf_des.classList.add("wolf_description")
-        //Wolf Name and age
+    //Wolf Name and age
     let wolf_main = document.createElement("span")
     let wolf_name = document.createElement("h2")
     wolf_name.classList.add("wolf_name")
@@ -30,11 +30,10 @@ function Card(){
     wolf_age.classList.add("wolf_age")
     let description = document.createElement("p")
     let img = document.createElement("img")
-    
+
 
     // Colocar um elemento dentro de outro
-    container.append(wolf_img)
-    container.append(wolf_des)
+
     wolf_des.append(wolf_main)
     wolf_main.append(wolf_name)
     wolf_main.append(adopt)
@@ -44,11 +43,28 @@ function Card(){
 
     // Pegar as informações e adicionar em um elemento
     // Nome
-    getData(0).then((dados) => {
+    getData(id).then((dados) => {
         wolf_name.innerText = dados.nome
         wolf_age.innerText = `Idade: ${dados.idade} anos`
         description.innerText = dados.descricao
         img.setAttribute("src", dados.imagem)
+
+        // Critério de alternância entre esquerda e direita
+        if (dados.id % 2 == 1) {
+            // Manter a mesma ordem dentro do card
+            container.append(wolf_img)
+            container.append(wolf_des)
+
+            // Manter a mesma classe na imagem
+            wolf_img.classList.add("wolf_img")
+        } else {
+            // Inverter a ordem dentro do card
+            container.append(wolf_des)
+            container.append(wolf_img)
+
+            // Mudar a classe da imagem
+            wolf_img.classList.add("wolf_img2")
+        }
 
     })
 
@@ -57,4 +73,10 @@ function Card(){
 
 
 }
-Card()
+
+for (let i = 0; i < 4; i++){
+    Card(i)
+}
+
+// TODO: Adicionar forma de identificar a página atual
+// TODO: Mudar o conteúdo que a função puxará de acordo com a página atual
