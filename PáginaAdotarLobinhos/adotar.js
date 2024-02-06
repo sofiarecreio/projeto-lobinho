@@ -1,3 +1,4 @@
 import { fetchJSONData } from "../fetch.js";
 
-fetchJSONData();
+let res = fetchJSONData();
+console.log(res)
