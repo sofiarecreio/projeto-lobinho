@@ -16,6 +16,10 @@ async function getLobo() {
 
     })
 }
+async function deleteLobo() {
+    
+}
+
 var nomelobo = document.getElementById("nomelobo")
 var desclobo = document.getElementById("desclobo")
 var imglobo = document.getElementById("imglobo")
