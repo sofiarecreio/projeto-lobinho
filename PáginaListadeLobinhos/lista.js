@@ -7,7 +7,7 @@ async function getData(id) {
     return data[id]
 }
 let filtro = document.getElementById("adotados")
-
+let wolfpack = document.querySelector(".wolfpack")
 function IsAdopted(id){
     getData(id).then((data) => {
         if (!data.adotado){
@@ -95,6 +95,7 @@ function Card(id, adopteds = false) {
             // Mudar a classe da imagem
             wolf_img.classList.add("wolf_img2")
         }
+        wolfpack.append(container)
 
     })
     }else{
@@ -141,6 +142,7 @@ function Card(id, adopteds = false) {
                 // Mudar a classe da imagem
                 wolf_img.classList.add("wolf_img2")
             }
+            wolfpack.append(container)
 
         })   
     }
