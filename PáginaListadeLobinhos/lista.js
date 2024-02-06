@@ -37,6 +37,7 @@ function Card(id, adopteds = false) {
     //Wolf Name and age
     let wolf_main = document.createElement("span")
     let wolf_name = document.createElement("h2")
+    wolf_name.id = id
     wolf_name.classList.add("wolf_name")
     let adopt = document.createElement("button")
     adopt.classList.add("adopt")
@@ -44,7 +45,6 @@ function Card(id, adopteds = false) {
     wolf_age.classList.add("wolf_age")
     let description = document.createElement("p")
     let img = document.createElement("img")
-
 
     // Colocar um elemento dentro de outro
 
@@ -150,6 +150,5 @@ function Card(id, adopteds = false) {
 for (let i = 0; i < 4; i++) {
     Card(i)
 }
-
 // TODO: Adicionar forma de identificar a página atual
 // TODO: Mudar o conteúdo que a função puxará de acordo com a página atual
