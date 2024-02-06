@@ -80,3 +80,4 @@ for (let i = 0; i < 4; i++){
 
 // TODO: Adicionar forma de identificar a página atual
 // TODO: Mudar o conteúdo que a função puxará de acordo com a página atual
+// TODO: Adicionar filtro para lobos adotados
