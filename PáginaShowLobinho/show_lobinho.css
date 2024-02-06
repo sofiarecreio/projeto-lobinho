@@ -1,0 +1,123 @@
+@font-face {
+    font-family: DarkGrotesque;
+    src: url(../fonts/DarkerGrotesque-VariableFont_wght.ttf);
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.secao_adocao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.info_lobo {
+    display: flex;
+    margin-top: 40px; 
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 247px;
+}
+
+.texto {
+    padding-left: 40px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.subtitulo {
+    display: flex;
+    font-size: 12px;   
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding:0 5px;
+    width: 80vw;
+}
+
+.nome_idade {
+    display: flex;
+}
+
+#id_nome {
+    width: 75vw;
+}
+
+#id_idade {
+    width: 5vw;
+}
+
+.input_box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.input_box input{
+    width: 100%;
+    padding:5px ;
+    font-size: 1.0em;
+    margin-top: 40px;
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+}
+
+.input_box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.btn_adotar {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    background-color: #2C5680;
+    padding: 5px;
+    border: 1px solid #2C5680;
+    font-size: 20px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-family: DarkGrotesque;
+}
+
+@media screen  and (max-width: 830px) {
+
+    #id_nome {
+        width: 70vw;
+    }
+    
+    #id_idade {
+        width: 10vw;
+    }
+}   
