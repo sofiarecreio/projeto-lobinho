@@ -23,7 +23,7 @@
 
 .info_lobo {
     display: flex;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 
 .img {
@@ -46,7 +46,7 @@
 
 .subtitulo {
     display: flex;
-    font-size: 12px;   
+    font-size: 12px;
 }
 
 .card {
@@ -54,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-    padding:0 5px;
+    padding: 0 5px;
     width: 80vw;
 }
 
@@ -75,13 +75,16 @@
     justify-content: center;
     margin: auto;
 }
+
 .lobomain {
     display: flex;
 }
+
 .imglobo {
     display: flex;
-    border:0;
+    border: 0;
 }
+
 .desclobo {
     display: flex;
 
@@ -91,13 +94,52 @@
     text-align: center;
 }
 
-@media screen  and (max-width: 830px) {
+/* Estilo botão adotar */
+#adotar {
+    background-color: #7aac3a;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+
+}
+
+/* Estilo botão excluir */
+#excluir {
+    padding: 10px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    background-color: #de5959;
+}
+
+/* Estilização da seção lobomain */
+.lobomain {
+    padding: 30px;
+}
+
+/* Estilização loboprincipal (Botões e imagem) */
+.loboprincipal {
+    padding: 25px;
+}
+
+/* Estilização do campo de botões */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+
+
+@media screen and (max-width: 830px) {
 
     #id_nome {
         width: 70vw;
     }
-    
+
     #id_idade {
         width: 10vw;
     }
-}   
+}
