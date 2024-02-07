@@ -12,3 +12,6 @@ obj.then(obj => {
     document.getElementById("teste").innerHTML
 })
 
+// Pegando dados vindos da url de redirecionamento se houver
+var parametros = new URLSearchParams(window.location.search)
+var id = parametros.get('id')
