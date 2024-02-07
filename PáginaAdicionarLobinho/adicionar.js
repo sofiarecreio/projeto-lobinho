@@ -9,31 +9,52 @@ async function getData() {
 
 // adicionando  lobinho
 async function PostWolf(data){
-
     //selecionando os valores do formulário
-    let nome = document.querySelector("#nome").value;
-    let idade = document.querySelector("#idade").value;
-    let link_foto = document.querySelector("#link").value;
-    let descricao = document.querySelector(".descricao").value;
+    let nome = document.querySelector("#nome");
+    let idade = document.querySelector("#idade");
+    let link_foto = document.querySelector("#link");
+    let descricao = document.querySelector(".descricao");
 
     // casos inválidos
-    if(nome == "" || idade == "" || isNaN(idade) == true || link_foto == "" || descricao == ""){
+    if(nome == "" || idade == "" || isNaN(idade.value) == true || link_foto == "" || descricao == ""){
         alert("preencha todos os campos corretamente")
     }else{
         //criando um lobo e adicionando seus dados
         let dados_lobo = {
         "id" : (data.lenght+1),
-        "nome": nome,
-        "idade": parseInt(idade),
+        "nome": nome.value,
+        "idade": parseInt(idade.value),
         "descricao": descricao,
-        "imagem": link_foto,
+        "imagem": link_foto.value,
         "adotado": false,
         "nomeDono": null,
         "idadeDono": null,
         "emailDono":null
         };
-
+        nome.value = "";
+        idade.value = "";
+        link_foto.value = "";
+        descricao.value = "";
+        //adicionando dados do lobo
         data.push(dados_lobo);
+        fetch("../lobinhos.json", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Erro ao salvar os dados.');
+            }
+            console.log('Novo lobinho adicionado com sucesso!');
+          })
+          .catch(error => {
+            console.error('Ocorreu um erro:', error);
+          });
+
+        //limpando as caixasd de texto
+
+
     }
 }
 
