@@ -29,7 +29,8 @@ async function PostWolf(data){
         "imagem": link_foto,
         "adotado": false,
         "nomeDono": null,
-        "idadeDono": null
+        "idadeDono": null,
+        "emailDono":null
         };
 
         data.push(dados_lobo);
