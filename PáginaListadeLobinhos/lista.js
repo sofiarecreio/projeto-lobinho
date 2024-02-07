@@ -99,6 +99,8 @@ async function Card(checado) {
             var wolf_age = document.createElement("p")
             wolf_age.classList.add("wolf_age")
             var description = document.createElement("p")
+            description.classList.add("wolf_desc")
+
             var img = document.createElement("img")
             wolf_des.append(wolf_main)
             wolf_main.append(wolf_name)
@@ -118,45 +120,48 @@ async function updateCard(checado){
     for (let i = 0; i < 4; i++){
         let valid = 0
         while (valid < 1){
-            let container = document.getElementById('cardid');
-            let wolf_name = container.querySelector('.wolf_name');
-            let wolf_age = container.querySelector('.wolf_age');
-            let description = container.querySelector('.wolf_description p');
-            let img = container.querySelector('img');
-            let adopt = container.querySelector('.adopt');
-            let dono = container.querySelector('.dono')
-
-            if(!checado && dados[loboid].adotado === false){
-                //atualize o card
-                console.log("atualize")
-                wolf_name.innerText = dados[loboid].nome
-                wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
-                description.innerText = dados[loboid].descricao
-                img.setAttribute("src", dados[loboid].imagem)
-                adopt.innerText = "Adotar"
-                adopt.style.backgroundColor = "#DEB959"
-                container.removeAttributeNode(dono)
-                valid++
-                loboid++
-                cardid++
+            let container = document.getElementById(cardid);
+            if(container){
+                let wolf_name = container.querySelector('.wolf_name');
+                let wolf_age = container.querySelector('.wolf_age');
+                let description = container.querySelector('.wolf_desc');
+                let img = container.querySelector('img');
+                let adopt = container.querySelector('.adopt');
+                if(!checado && dados[loboid].adotado === false){
+                    //atualize o card
+                    console.log("atualize no check")
+                    wolf_name.innerText = dados[loboid].nome
+                    wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
+                    description.innerText = dados[loboid].descricao
+                    img.setAttribute("src", dados[loboid].imagem)
+                    adopt.innerText = "Adotar"
+                    adopt.style.backgroundColor = "#DEB959"
+                    valid++
+                    loboid++
+                    cardid++
 
 
-            } else if (checado) {
-                // atualize o card
-                console.log("atualize")
-                wolf_name.innerText = dados[i].nome
-                wolf_age.innerText = `Idade: ${dados[i].idade} anos`
-                description.innerText = dados[i].descricao
-                img.setAttribute("src", dados[i].imagem)
-                valid++
-                loboid++
-                cardid++
+                } else if (checado) {
+                    // atualize o card
+                    console.log("atualize check")
+                    wolf_name.innerText = dados[loboid].nome
+                    wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
+                    description.innerText = dados[loboid].descricao
+                    img.setAttribute("src", dados[loboid].imagem)
+                    valid++
+                    loboid++
+                    cardid++
+                }
+                else {
+                    loboid++
+                }
             }
             else {
-                loboid++
+                console.log("container é null")
             }
         }
     }
+
 }
 
 filtro.addEventListener('change', function() {
