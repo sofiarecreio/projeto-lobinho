@@ -1,0 +1,88 @@
+/* Main Style */
+main {
+    padding: 25px;
+}
+
+
+/* Main -> Search Style */
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search input {
+    width: 50%;
+}
+
+.search button {
+    margin-left: 10px;
+    background-color: #deb959;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* End Search Style */
+
+/* Begin Filter Style */
+.filter {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter p {
+    margin-left: 10px;
+    ;
+}
+
+/* End Filter Style */
+/* Begin Section Style */
+.wolfpack {
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.wolf_img {
+    width: 50%;
+    height: 250px;
+    padding: 20px;
+    /* border: 1px solid yellow; */
+}
+
+.wolf_img img {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+}
+
+.wolf_description {
+    padding: 20px;
+}
+
+.wolf_description span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wolf_description span button {
+    background-color: #DEB959;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.wolf_description p {
+    margin-top: 10px;
+}
+
+.wolf_age {
+    color: grey;
+}

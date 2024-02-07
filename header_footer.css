@@ -1,0 +1,142 @@
+/* Este é o arquivo CSS padrão para o cabeçalho e rodapé de todas as páginas do projeto, o HTML padrão também deve ser seguido. */
+
+
+/* Begin standart Style */
+html,body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* End Standart style */
+
+/* Begin Header Style */
+header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    background-color: #85CDF5;
+    align-items: center;
+}
+
+.nossos_lobinhos, .quem_somos_link {
+    a {
+        position: relative;
+        color: #000;
+        text-decoration: none;
+      }   
+      a:hover {
+        color: #000;
+      }     
+      a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }   
+      a:hover::before {
+        transform: scaleX(1);
+      }
+    font-size: 20px;
+    font-weight: 550;
+    font-family: DarkGrotesque;
+}
+
+.nossos_lobinhos {
+    a::before {
+        transform-origin: top left;
+    }
+}
+
+.quem_somos_link {
+    a::before{
+        transform-origin: top right;
+    } 
+}
+
+/* End Header Style */
+
+/* Begin Footer Style */
+
+.retangulo {
+    width: 100%;
+    height: 5px;
+    background: -webkit-gradient(linear, left top, right top, from(#DEB959), to(#2C5680)) no-repeat;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0;
+    flex-basis: 100px;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: DarkGrotesque;
+    background-color: #353535;
+}
+
+.infos {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contato {
+    margin: 15px;
+}
+
+.local,
+.tel,
+.email {
+    display: flex;
+    align-items: baseline;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.btn_quem_somos_div {
+    margin-left: 22px;
+}
+
+.btn_quem_somos {
+    background-color: #DEB959;
+    margin-left: 22px;
+    padding: 5px;
+    border: 1px solid #DEB959;
+    font-size: 20px;
+}
+
+.pata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.texto_rodape {
+    text-align: center;
+    color: white;
+}
+
+@media screen  and (max-width: 830px) {
+    .rodape {
+        flex-direction: column;
+    }
+
+    .infos {
+        flex-direction: column;
+    }
+}
+
+/* End Footer Style */

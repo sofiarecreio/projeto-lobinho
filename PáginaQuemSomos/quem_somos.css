@@ -1,0 +1,29 @@
+.quem_somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial;
+    padding: 30px;
+}
+
+.texto_secao {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: Arial;
+    margin-bottom: 50px;
+}
+
+
+
+
+
