@@ -24,7 +24,7 @@ async function PostWolf(data){
         let dados_lobo = {
         "id" : (data.lenght+1),
         "nome": nome,
-        "idade": idade,
+        "idade": parseInt(idade),
         "descricao": descricao,
         "imagem": link_foto,
         "adotado": false,
