@@ -49,17 +49,27 @@ main {
 
 }
 
-.wolf_img {
+.wolf_img,
+.wolf_img2 {
     width: 50%;
     height: 250px;
     padding: 20px;
     /* border: 1px solid yellow; */
 }
 
+
 .wolf_img img {
     width: auto;
     height: 250px;
     object-fit: cover;
+    box-shadow: -30px -30px #2c5680;
+}
+
+.wolf_img2 img {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 30px -30px #2c5680;
 }
 
 .wolf_description {
@@ -69,13 +79,14 @@ main {
 .wolf_description span {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .wolf_description span button {
     background-color: #DEB959;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
 }
 

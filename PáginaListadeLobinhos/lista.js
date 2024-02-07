@@ -1,5 +1,5 @@
+import { fetchJSONData } from "../fetch.js";
 //Como estamos lidando com uma promise, a função precisa ser acessada com uso de .then(data => ) para acessar os dados dela
-fetchJSONData().then(data => console.log(data));
 // fetchJSONData().then(data => console.log(data)); 
 async function getData() {
     let data = await fetchJSONData()
@@ -7,7 +7,6 @@ async function getData() {
 }
 let filtro = document.getElementById("adotados")
 let wolfpack = document.querySelector(".wolfpack")
-
 function IsAdopted(id){
     getData(id).then((data) => {
         if (!data.adotado){
