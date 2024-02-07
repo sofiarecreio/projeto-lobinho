@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Rafael de Lima Pereira (@rafalime)">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="quem_somos.css">
     <link rel="stylesheet" href="../header_footer.css">
-    <link rel="stylesheet" href="lista.css">
-    <title>Lista de Lobinhos</title>
+    <script src="show_lobinho.js" type="module"></script>
+    
 </head>
 <body>
     <header>
         <div class="nossos_lobinhos">
-            <a href="#">Nossos Lobinhos</a>
+            <a href="../PáginaListadeLobinhos/lista.html">Nossos Lobinhos</a>
         </div>
         <div class="lobinho">
             <img src="../IMG/Lobinho.png" alt="Lobinho">
@@ -20,40 +21,20 @@
             <a href="../PáginaQuemSomos/quem_somos.html">Quem Somos</a>
         </div>
     </header>
+    <div class="textonome">
+        <h1 class="nomelobo" id="nomelobo">Nome</h1>
+    </div>
 
-    <!-- Conteúdo da página -->
-
-    <main>
-        <div class="search">
-            <input type="text">
-            <button>+ Lobo</button>
-        </div>
-        <!-- Filtro lobos adotados -->
-        <div class="filter">
-            <input type="checkbox" name="" id="adotados" checked>
-            <p>Ver lobinhos adotados</p>
-        </div>
-        <!-- Campo de repetição -->
-        <!-- Seção dos lobos -->
-        <section class="wolfpack">
-            <div class="container">
-                <div class="wolf_img">
-                    <img src="../IMG/wolf_demo.jpg" alt="">
-                </div>
-                <div class="wolf_description">
-                    <span>
-                        <h2 class="wolf_name">Nome do lobo</h2>
-                        <button class="adopt">Adotar</button>
-                    </span>
-                    <p class="wolf_age">Idade: XX anos</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque architecto dignissimos asperiores modi exercitationem non, cum fugit animi qui nulla ipsam quos, sapiente molestias maiores sequi rerum! Odio, a nobis.</p>
-                </div>
+    <div class="lobomain">
+        <div class="loboprincipal">
+            <img id="imglobo" class="imglobo" height="200rem">
+            <div class="buttons">
+                <button id="adotar">ADOTAR</button>
+                <button id="excluir" onclick="deleteLobo()">EXCLUIR</button>
             </div>
-        </section>
-
-
-    </main>
-
+        </div>
+        <p id="desclobo" class="desclobo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum leo ex, non ultricies quam tempus a. In tincidunt mi sapien, eu aliquam ex rhoncus vel. Fusce a pretium enim. Praesent suscipit semper augue, nec placerat mi tristique vitae. Duis erat quam, pulvinar vitae neque eu, aliquet suscipit felis. Nunc ultricies id odio at dignissim. Morbi luctus porttitor vehicula. Fusce eu tincidunt tortor. Etiam at volutpat tortor, dapibus cursus lorem. Vivamus interdum ullamcorper leo, quis cursus quam fermentum sed. Donec tempus imperdiet dui, nec rhoncus eros pharetra quis.</p>
+    </div>
 
     <footer>
         <div class="retangulo">
@@ -95,5 +76,7 @@
         </div>
 
     </footer>
+
+    <script src="quem_somos.js"></script>
 </body>
 </html>

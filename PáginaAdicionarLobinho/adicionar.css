@@ -1,3 +1,13 @@
+@font-face {
+    font-family: DarkGrotesque;
+    src: url(../fonts/DarkerGrotesque-VariableFont_wght.ttf);
+  }
+
+label, a, p{
+    font-family: DarkGrotesque;
+}
+
+
 .secao {
     display: flex;
     flex-direction: column;
@@ -54,13 +64,15 @@
     margin-right: 50px;
 }
 
-.input_box input{
+.input_box input, textarea{
     width: 100%;
     padding:5px ;
     font-size: 1.0em;
     margin-top: 40px;
     background-color: #E6E6E6;
     outline: none;
+    font-family: arial;
+    border: 2px solid black;
 }
 
 .input_box label{

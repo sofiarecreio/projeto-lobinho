@@ -1,0 +1,170 @@
+@font-face {
+    font-family: DarkGrotesque;
+    src: url(../fonts/DarkerGrotesque-VariableFont_wght.ttf);
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.secao_adocao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.info_lobo {
+    display: flex;
+    margin-top: 40px; 
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 247px;
+}
+
+.texto {
+    padding-left: 40px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.subtitulo {
+    display: flex;
+    font-size: 12px;   
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding:0 5px;
+    width: 80vw;
+}
+
+.nome_idade {
+    display: flex;
+}
+
+#id_nome {
+    width: 75vw;
+}
+
+#id_idade {
+    width: 5vw;
+}
+
+.textnome{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.lobomain {
+    display: flex;
+}
+
+.imglobo {
+    display: flex;
+    border:0;
+}
+
+.desclobo {
+    display: flex;
+
+}
+
+.nomelobo {
+    text-align: center;
+}
+
+/* Estilo botão adotar */
+#adotar {
+    background-color: #7aac3a;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+
+}
+
+/* Estilo botão excluir */
+#excluir {
+    padding: 10px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    background-color: #de5959;
+}
+
+/* Estilização da seção lobomain */
+.lobomain {
+    padding: 30px;
+    /* border:1px solid grey; */
+}
+
+/* Estilização loboprincipal (Botões e imagem) */
+.loboprincipal {
+    padding: 25px;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    /* border: 1px solid yellowgreen; */
+
+}
+
+/* Estilização do campo de botões */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+#excluir,
+#adotar:hover {
+    cursor: pointer;
+}
+
+/* Estilização imagem lobo */
+.imglobo {
+    box-shadow: -20px -20px #2c5680;
+}
+
+/* Estilização da descrição do lobo */
+.desclobo {
+    /* border: 1px solid red; */
+    padding: 10px;
+
+}
+
+@media screen  and (max-width: 830px) {
+
+    #id_nome {
+        width: 70vw;
+    }
+    
+    #id_idade {
+        width: 10vw;
+    }
+} 
+
