@@ -118,7 +118,7 @@ async function updateCard(checado){
     for (let i = 0; i < 4; i++){
         let valid = 0
         while (valid < 1){
-            let container = document.getElementById(cardid);
+            let container = document.getElementById('cardid');
             let wolf_name = container.querySelector('.wolf_name');
             let wolf_age = container.querySelector('.wolf_age');
             let description = container.querySelector('.wolf_description p');
