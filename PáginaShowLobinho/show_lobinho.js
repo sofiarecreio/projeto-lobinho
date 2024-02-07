@@ -10,7 +10,7 @@ async function getData() {
 async function getLobo() {
     let loboid = localStorage.getItem("inputValue");
     loboid = 2
-    getData().then(dados =>{
+    getData().then(dados => {
         let lobo = dados[loboid - 1]
         nomelobo.innerText = lobo.nome;
         desclobo.innerHTML = lobo.descricao;
@@ -18,8 +18,20 @@ async function getLobo() {
     })
 }
 async function deleteLobo() {
-    
+
 }
+// Função para redirecionar para página de adoção quando clicar no botão "adotar"
+function redirect() {
+    console.log("Função acionada")
+    window.location.href = "../PáginaAdotarLobinhos/adotar.html"
+}
+let btn_adotar = document.getElementById("adotar")
+btn_adotar.addEventListener("click", redirect)
+
+let id = 2
+
+
+
 
 var nomelobo = document.getElementById("nomelobo")
 var desclobo = document.getElementById("desclobo")
