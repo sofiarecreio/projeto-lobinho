@@ -22,7 +22,7 @@ Card(checado)
 /* Funcionalidade 1: Criar um card do lobo a partir do arquivo JSON*/
 async function Card(checado) {
     // Mostra todos os lobos
-    async function criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado){
+    async function criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono){
         let dados = await getData();
 
         // Se não crie um novo
@@ -44,11 +44,10 @@ async function Card(checado) {
                 if (dados[i].adotado) {
                     adopt.innerText = "Adotado"
                     adopt.style.backgroundColor = "#7AAC3A"
-                    let dono = document.createElement("h2")
                     dono.innerText = `Adotado por ${dados[i].nomeDono}`
-                    description.append(dono)
                 } else {
                     adopt.innerText = "Adotar"
+                    dono.innerText = ""
                 }
             }
         
@@ -100,6 +99,8 @@ async function Card(checado) {
             wolf_age.classList.add("wolf_age")
             var description = document.createElement("p")
             description.classList.add("wolf_desc")
+            let dono = document.createElement("h2")
+            dono.classList.add("dono")
 
             var img = document.createElement("img")
             wolf_des.append(wolf_main)
@@ -107,9 +108,9 @@ async function Card(checado) {
             wolf_main.append(adopt)
             wolf_des.append(wolf_age)
             wolf_des.append(description)
+            wolf_des.append(dono)
             wolf_img.append(img)
-            loboid = await criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado)
-            console.log(loboid)
+            loboid = await criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono)
             cardid += 1
         }
     }
@@ -127,6 +128,8 @@ async function updateCard(checado){
                 let description = container.querySelector('.wolf_desc');
                 let img = container.querySelector('img');
                 let adopt = container.querySelector('.adopt');
+                let dono = container.querySelector('.dono')
+                console.log(dono)
                 if(!checado && dados[loboid].adotado === false){
                     //atualize o card
                     console.log("atualize no check")
@@ -134,6 +137,7 @@ async function updateCard(checado){
                     wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
                     description.innerText = dados[loboid].descricao
                     img.setAttribute("src", dados[loboid].imagem)
+                    dono.innerText = ""
                     adopt.innerText = "Adotar"
                     adopt.style.backgroundColor = "#DEB959"
                     valid++
@@ -148,6 +152,9 @@ async function updateCard(checado){
                     wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
                     description.innerText = dados[loboid].descricao
                     img.setAttribute("src", dados[loboid].imagem)
+                    dono.innerText = `Adotado por ${dados[loboid].nomeDono}`
+                    adopt.innerText = "Adotado"
+                    adopt.style.backgroundColor = '#7AAC3A'
                     valid++
                     loboid++
                     cardid++
