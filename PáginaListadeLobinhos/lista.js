@@ -152,9 +152,15 @@ async function updateCard(checado){
                     wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
                     description.innerText = dados[loboid].descricao
                     img.setAttribute("src", dados[loboid].imagem)
-                    dono.innerText = `Adotado por ${dados[loboid].nomeDono}`
-                    adopt.innerText = "Adotado"
-                    adopt.style.backgroundColor = '#7AAC3A'
+                    if(dados[loboid].adotado){
+                        dono.innerText = `Adotado por ${dados[loboid].nomeDono}`
+                        adopt.innerText = "Adotado"
+                        adopt.style.backgroundColor = '#7AAC3A'
+
+                    }
+                    else {
+                        dono.innerText = ""
+                    }
                     valid++
                     loboid++
                     cardid++
