@@ -6,20 +6,6 @@ async function getData() {
     return data
 }
 
-getData()
-
-/*
-getData()
-    .then(data => {
-        // Aqui você pode operar no array retornado pela função fetchJSONData()
-        console.log("Array retornado:", data);
-        PostWolf()
-    })
-    .catch(error => {
-        console.error("Ocorreu um erro:", error);
-    });
-*/
-
 
 // adicionando  lobinhos
 async function PostWolf(){
@@ -42,6 +28,7 @@ async function PostWolf(){
                 if(descricao == ""){
                     alert("preencha a descricao corretamente")
                 }else{
+                    //caso todos os campos estejam válidos
                     //criando um dicionario com os valores digitados nos campos
                     let dados = {
                         "id" : (dados.lenght+1),
@@ -62,6 +49,14 @@ async function PostWolf(){
 const btn_salvar = document.querySelector(".btn_salvar")
 
 //ação de apertar o botao
-btn_salvar.addEventListener("click",()=>{PostWolf()});
+btn_salvar.addEventListener("click",()=>{getData()
+    .then(data => {
+        console.log(data);
+        PostWolf()
+    })
+    .catch(error => {
+        console.error("Ocorreu um erro:", error);
+    })
+});
 
 
