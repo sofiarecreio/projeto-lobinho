@@ -14,6 +14,7 @@ async function PostWolf(data){
     let idade = document.querySelector("#idade");
     let link_foto = document.querySelector("#link");
     let descricao = document.querySelector(".descricao");
+    let id = 
 
     // casos inválidos
     if(nome.value == "" || idade.value == "" || isNaN(idade.value) == true || link_foto.value == "" || descricao.value == ""){
