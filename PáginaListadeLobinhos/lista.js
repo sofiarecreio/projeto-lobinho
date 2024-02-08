@@ -182,7 +182,7 @@ async function showResults(nomes){
     let loboid = 0
     for (let i = 0; i < 4; i++){
         let valid = 0
-        while (valid < 1){
+        while (valid < 1 && loboid < dados.length){
             let container = document.getElementById(cardid);
             if(container){
                 let wolf_name = container.querySelector('.wolf_name');
@@ -203,21 +203,27 @@ async function showResults(nomes){
                     valid++
                     loboid++
                     cardid++
+                    container.style.display = "block"; // Mostra o elemento
                 }
 
                 else {
+                    if (loboid)
                     loboid++
-                }
+                    container.style.display = "none"; // Oculta o elemento
                 }
             }
         }
     }
+}
 async function searchNames(inputName) {
     let dados = await getData();
     let filteredData = dados.filter(item => item.nome.toLowerCase().includes(inputName.toLowerCase()));
     let nomes = filteredData.map(item => ({id: item.id, nome: item.nome}));
-    console.log(nomes)
-    showResults(nomes)
+    if(nomes.length > 0) {
+        await showResults(nomes)
+    } else {
+        console.log("Nenhum nome correspondente encontrado.")
+    }
 }
 filtro.addEventListener('change', function() {
     if (this.checked) {
