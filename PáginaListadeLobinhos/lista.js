@@ -7,38 +7,38 @@ async function getData() {
 }
 let filtro = document.getElementById("adotados")
 let wolfpack = document.querySelector(".wolfpack")
-function IsAdopted(id){
-    getData(id).then((data) => {
-        if (!data.adotado){
-            return true
-        }else{
-            return false
-        }
-    })
-}
 let checado = true
 Card(checado)
 
 /* Funcionalidade 1: Criar um card do lobo a partir do arquivo JSON*/
 async function Card(checado) {
     // Mostra todos os lobos
-    async function criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono){
+    async function criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono,wolfid){
         let dados = await getData();
 
         // Se não crie um novo
         let i = loboid
         let valid = 0
-        console.log(i)
         //Enquanto não satisfazer o filtro, nao mostre na tela
         while (valid < 1){
-            console.log(checado)
+
             if(checado){
                 wolf_name.innerText = dados[i].nome
                 wolf_age.innerText = `Idade: ${dados[i].idade} anos`
                 description.innerText = dados[i].descricao
                 img.setAttribute("src", dados[i].imagem)
-            
-                //     // TODO: Adicionar filtro para lobos adotados
+                wolfid.innerText = dados[i].id
+                adopt.id = cardid
+                adopt.addEventListener('click', function() {
+                    // Pega o conteudo do ID
+                    var h2Content = document.querySelector('h2.wolfid').innerText;
+
+                    //Guarda id
+                    localStorage.setItem('ID', h2Content);
+
+                    
+                    window.location.href = '../PáginaShowLobinho/show_lobinho.html';
+                });
             
                 //     // Adotado?
                 if (dados[i].adotado) {
@@ -94,6 +94,7 @@ async function Card(checado) {
             
             wolf_name.classList.add("wolf_name")
             var adopt = document.createElement("button")
+            
             adopt.classList.add("adopt")
             var wolf_age = document.createElement("p")
             wolf_age.classList.add("wolf_age")
@@ -101,16 +102,21 @@ async function Card(checado) {
             description.classList.add("wolf_desc")
             let dono = document.createElement("h2")
             dono.classList.add("dono")
+            let wolfid = document.createElement("h2")
+            wolfid.classList.add("wolfid")
+            //adiciona id como texto escondido
+            wolfid.style.display = "none"
 
             var img = document.createElement("img")
             wolf_des.append(wolf_main)
             wolf_main.append(wolf_name)
             wolf_main.append(adopt)
+            wolf_main.append(wolfid)
             wolf_des.append(wolf_age)
             wolf_des.append(description)
             wolf_des.append(dono)
             wolf_img.append(img)
-            loboid = await criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono)
+            loboid = await criaCard(container, wolf_name,wolf_age,wolf_des,wolf_img,adopt,img,description,wolf_main,loboid, cardid, checado,dono,wolfid)
             cardid += 1
         }
     }
@@ -129,15 +135,18 @@ async function updateCard(checado){
                 let img = container.querySelector('img');
                 let adopt = container.querySelector('.adopt');
                 let dono = container.querySelector('.dono')
-                console.log(dono)
+                let wolfid = container.querySelector('.wolfid')
+               
                 if(!checado && dados[loboid].adotado === false){
                     //atualize o card
-                    console.log("atualize no check")
+
                     wolf_name.innerText = dados[loboid].nome
                     wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
                     description.innerText = dados[loboid].descricao
                     img.setAttribute("src", dados[loboid].imagem)
                     dono.innerText = ""
+                    wolfid.innerText = dados[loboid].id
+
                     adopt.innerText = "Adotar"
                     adopt.style.backgroundColor = "#DEB959"
                     valid++
@@ -147,11 +156,12 @@ async function updateCard(checado){
 
                 } else if (checado) {
                     // atualize o card
-                    console.log("atualize check")
+                    
                     wolf_name.innerText = dados[loboid].nome
                     wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
                     description.innerText = dados[loboid].descricao
                     img.setAttribute("src", dados[loboid].imagem)
+                    wolfid = dados[loboid].id
                     if(dados[loboid].adotado){
                         dono.innerText = `Adotado por ${dados[loboid].nomeDono}`
                         adopt.innerText = "Adotado"
@@ -203,7 +213,7 @@ async function showResults(nomes){
                     valid++
                     loboid++
                     cardid++
-                    container.style.display = "block"; // Mostra o elemento
+                    container.style.display = "flex"; // Mostra o elemento
                 }
 
                 else {
@@ -215,6 +225,7 @@ async function showResults(nomes){
         }
     }
 }
+
 async function searchNames(inputName) {
     let dados = await getData();
     let filteredData = dados.filter(item => item.nome.toLowerCase().includes(inputName.toLowerCase()));
@@ -237,3 +248,12 @@ filtro.addEventListener('change', function() {
 document.getElementById("search").oninput = function(event) {
     searchNames(event.target.value);
 }
+
+var buttons = document.querySelectorAll('button');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var divContent = this.parentElement.innerHTML;
+    console.log(divContent);
+  });
+});
