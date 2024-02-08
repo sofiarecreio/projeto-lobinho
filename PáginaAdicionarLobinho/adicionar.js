@@ -16,7 +16,7 @@ async function PostWolf(data){
     let descricao = document.querySelector(".descricao");
 
     // casos inválidos
-    if(nome.value == "" || idade.value == "" || isNaN(idade.value) == true || link_foto == "" || descricao == ""){
+    if(nome.value == "" || idade.value == "" || isNaN(idade.value) == true || link_foto.value == "" || descricao.value == ""){
         alert("preencha todos os campos corretamente")
     }else{
         //criando um lobo e adicionando seus dados
