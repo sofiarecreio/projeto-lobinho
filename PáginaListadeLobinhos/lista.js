@@ -176,7 +176,49 @@ async function updateCard(checado){
     }
 
 }
+async function showResults(nomes){
+    let cardid = 0
+    let dados = await getData();
+    let loboid = 0
+    for (let i = 0; i < 4; i++){
+        let valid = 0
+        while (valid < 1){
+            let container = document.getElementById(cardid);
+            if(container){
+                let wolf_name = container.querySelector('.wolf_name');
+                let wolf_age = container.querySelector('.wolf_age');
+                let description = container.querySelector('.wolf_desc');
+                let img = container.querySelector('img');
+                let adopt = container.querySelector('.adopt');
+                let dono = container.querySelector('.dono')
+                if(nomes.some(item => item.id === dados[loboid].id)){
+                    console.log(`${dados[loboid].id} é valido`)
+                    wolf_name.innerText = dados[loboid].nome
+                    wolf_age.innerText = `Idade: ${dados[loboid].idade} anos`
+                    description.innerText = dados[loboid].descricao
+                    img.setAttribute("src", dados[loboid].imagem)
+                    dono.innerText = ""
+                    adopt.innerText = "Adotar"
+                    adopt.style.backgroundColor = "#DEB959"
+                    valid++
+                    loboid++
+                    cardid++
+                }
 
+                else {
+                    loboid++
+                }
+                }
+            }
+        }
+    }
+async function searchNames(inputName) {
+    let dados = await getData();
+    let filteredData = dados.filter(item => item.nome.toLowerCase().includes(inputName.toLowerCase()));
+    let nomes = filteredData.map(item => ({id: item.id, nome: item.nome}));
+    console.log(nomes)
+    showResults(nomes)
+}
 filtro.addEventListener('change', function() {
     if (this.checked) {
         checado = true
@@ -186,3 +228,6 @@ filtro.addEventListener('change', function() {
         updateCard(checado)
     }
 });
+document.getElementById("search").oninput = function(event) {
+    searchNames(event.target.value);
+}
