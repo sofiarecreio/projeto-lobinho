@@ -11,7 +11,7 @@ async function getLobo() {
     let loboid = localStorage.getItem("inputValue");
     loboid = 2
     getData().then(dados => {
-        let lobo = dados[loboid - 1]
+        let lobo = dados[loboid]
         nomelobo.innerText = lobo.nome;
         desclobo.innerHTML = lobo.descricao;
         imglobo.setAttribute("src", lobo.imagem)
