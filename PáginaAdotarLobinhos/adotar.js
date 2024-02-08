@@ -19,8 +19,13 @@ if (!(id === null)) {
     ID.innerHTML = `ID:${id}`
 }
 
+// Adicionar elementos do arquivo JSON
 let pic = document.querySelector(".img img")
+let name = document.querySelector(".titulo p")
 getData(id).then((data) => {
     pic.setAttribute("src", data.imagem)
+    name.innerHTML += data.nome
 
 })
+
+
